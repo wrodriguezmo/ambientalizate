@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+
+    </ion-buttons>
+    <button ion-button icon-only (click)="cancel()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+    <ion-title><p>&nbsp;&nbsp;Detalles de los Eventos</p></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" placeholder="Title del Evento" [(ngModel)]="event.title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label><p>&nbsp;&nbsp;Hora Inicio</p></ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.startTime" [min]="minDate"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label><p>&nbsp;&nbsp;Hora Fin</p></ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.endTime" [min]="minDate"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label><p>&nbsp;&nbsp;Ver Todos los Eventos</p></ion-label>
+      <ion-checkbox [(ngModel)]="event.allDay"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button full icon-left ion-button outline color="dark" block style="text-align:left;" (click)="addEvent()">
+    <ion-icon name="checkmark"></ion-icon> Agregar Evento
+  </button>
+  <!-- (click)="save()" -->
+
+
+
+  </ion-content>

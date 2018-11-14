@@ -1,0 +1,72 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form (submit)="doSignup()">
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>{{ 'Nombre' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'Apellido' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.lastname" name="lastname"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'CC' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.CC" name="CC"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'Telefono' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.phone" name="phone"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'Edad' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.age" name="age"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label fixed>{{ 'Email' | translate }}</ion-label>
+        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'Experiencia' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.experience" name="experience"></ion-input>
+      </ion-item>
+
+      
+
+      <!--
+      Want to add a Username? Here you go:
+
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
+      </ion-item>
+      -->
+
+      <ion-item>
+        <ion-label fixed>{{ 'Contraseña' | translate }}</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
+      </div>
+
+    </ion-list>
+  </form>
+</ion-content>

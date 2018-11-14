@@ -1,0 +1,26 @@
+page-perfil-usuario {
+
+    text-align: center;
+    .logo2 {
+      width: 170px;
+      height: 38px;
+
+      .logo3 {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    background-image: url('../../assets/Varios/fondo02.jpg') !important;
+   
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    ion-content{
+      background-color: transparent !important;
+    }
+
+    
+}
+
